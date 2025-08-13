@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ลูกค้าผ่อน</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="sidebar">
+  <h2>เมนูหลัก</h2>
+  <ul>
+    <li><a href="index.html">หน้าแรก</a></li>
+    <li><a href="add-product.html">เพิ่มสินค้า</a></li>
+    <li><a href="repair.html">แจ้งซ่อม</a></li>
+    <li><a href="member.html">ลูกค้าผ่อน</a></li>
+    <li><a href="sales.html">รายงานยอดขาย</a></li>
+  </ul>
+</div>
+<div class="content">
+  <h1>ข้อมูลลูกค้าผ่อน</h1>
+  <form id="member-form">
+    <input type="text" id="m-name" placeholder="ชื่อ - นามสกุล" required />
+    <input type="text" id="m-model" placeholder="รุ่นมือถือที่ผ่อนอยู่" required />
+    <input type="number" id="m-down" placeholder="ยอดวางดาวน์" required />
+    <input type="number" id="m-month" placeholder="ยอดผ่อนแต่ละเดือน" required />
+    <input type="number" id="m-total" placeholder="จำนวนเงิน" required />
+    <button type="submit" class="btn btn-green">บันทึกข้อมูลในGoogle Sheet</button>
+    <button type="button" id="load-members" class="btn btn-blue">เรียกดูข้อมูลGoogle Sheet</button>
+  </form>
+  <div id="member-list" class="table-container"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+</body>
+</html>
