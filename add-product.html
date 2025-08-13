@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>เพิ่มสินค้า</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="sidebar">
+  <h2>เมนูหลัก</h2>
+  <ul>
+    <li><a href="index.html">หน้าแรก</a></li>
+    <li><a href="add-product.html">เพิ่มสินค้า</a></li>
+    <li><a href="repair.html">แจ้งซ่อม</a></li>
+    <li><a href="member.html">ลูกค้าผ่อน</a></li>
+    <li><a href="sales.html">รายงานยอดขาย</a></li>
+  </ul>
+</div>
+<div class="content">
+  <h1>เพิ่มสินค้า</h1>
+  <form id="product-form">
+    <input type="text" id="p-name" placeholder="ชื่อสินค้า" required />
+    <textarea id="p-desc" placeholder="คำอธิบายสินค้า"></textarea>
+    <input type="number" id="p-price" placeholder="ราคา" required />
+    <input type="number" id="p-qty" placeholder="จำนวนคงเหลือ" required />
+    <button type="submit" class="btn btn-green">บันทึกข้อมูลในGoogle Sheet</button>
+    <button type="button" id="load-products" class="btn btn-blue">เรียกดูข้อมูลGoogle Sheet</button>
+  </form>
+  <input type="text" id="product-search" placeholder="ค้นหาสินค้า" />
+  <div id="product-list" class="table-container"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+</body>
+</html>

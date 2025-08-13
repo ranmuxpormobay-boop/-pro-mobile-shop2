@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>รายงานยอดขาย</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="sidebar">
+  <h2>เมนูหลัก</h2>
+  <ul>
+    <li><a href="index.html">หน้าแรก</a></li>
+    <li><a href="add-product.html">เพิ่มสินค้า</a></li>
+    <li><a href="repair.html">แจ้งซ่อม</a></li>
+    <li><a href="member.html">ลูกค้าผ่อน</a></li>
+    <li><a href="sales.html">รายงานยอดขาย</a></li>
+  </ul>
+</div>
+<div class="content">
+  <h1>รายงานยอดขาย</h1>
+  <form id="sale-form">
+    <input type="date" id="s-date" required />
+    <input type="number" id="s-amount" placeholder="ยอดขาย" required />
+    <button type="submit" class="btn btn-green">บันทึกข้อมูลในGoogle Sheet</button>
+    <button type="button" id="load-sales" class="btn btn-blue">เรียกดูข้อมูลGoogle Sheet</button>
+  </form>
+  <div id="sale-list" class="table-container"></div>
+  <div class="chart-container">
+    <canvas id="sale-chart"></canvas>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
